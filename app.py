@@ -5,7 +5,7 @@ from mlxtend.frequent_patterns import association_rules, apriori
 import streamlit as st
 
 
-coffe_shop = pd.read_csv('D:\All_data_science_project\Retail Analysis\DATA\Coffe Shop Sales.csv')
+coffe_shop = pd.read_csv('DATA\Coffe Shop Sales.csv')
 
 df_pivot = coffe_shop.pivot_table(index='transaction_number',columns ='item',values = 'amount',aggfunc='sum').fillna(0)
 
